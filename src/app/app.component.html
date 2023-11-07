@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="mt-4 p-5 bg-secondary text-white rounded">
+    <h1>{{ title }}</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facere dolores saepe voluptates dicta quia, rem incidunt architecto totam facilis, omnis similique quod ipsa nobis nulla cupiditate? Perferendis, distinctio voluptas nihil earum cupiditate ea, assumenda, iure iste blanditiis nesciunt culpa illo. Blanditiis laboriosam, pariatur suscipit autem alias iusto quas. Ea, magni. Consequuntur qui nulla ex laboriosam. Esse ratione explicabo earum officia optio, ab magnam praesentium. Eius ratione, reprehenderit voluptate earum voluptates dolorum tempore beatae rerum est architecto dolorem accusamus, voluptas voluptatem facere libero placeat illum? Reprehenderit ab qui quae excepturi nobis consequuntur exercitationem animi. Corrupti sapiente at nesciunt fugit ab!</p>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="float-start">
+          <a class="navbar-brand" href="#">{{ title }}</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <form class="d-flex float-end" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <br /><br />
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+    <div class="col">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Twitter(X) Handle" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="76"></textarea>
+  </div>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div class="d-grid gap-4">
+        <input type="text" #entryNum />
+        <button clas="btn btn-info" (click)="generateRandomNumber(entryNum.value)">Add Task</button>
+      </div>
+      <div class="col-3"></div>
+    </div>
+    
+  </div>
+</div>
+<br />
+<app-childlist [numLengthStatus]="numLengthStatus" [MyNumsCollection]="MyNums" (itemNumId)="deleteItem($event)"></app-childlist>

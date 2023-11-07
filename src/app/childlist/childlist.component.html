@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table border table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let single of MyNumsCollection">
+          <th scope="row">{{ single.numid }}</th>
+          <td>{{ single.num }}</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td><button class="btn btn-dark btn-sm" (click)="SendNumIDToParent(single.numid)">Delete Task</button></td>
+        </tr>
+        <tr *ngIf="numLengthStatus">
+          <td colspan="5" align="center">No ToDo Items at this point in time...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- (click)="deleteItem(single.numid)" -->
